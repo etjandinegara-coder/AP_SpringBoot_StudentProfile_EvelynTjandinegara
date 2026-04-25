@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${pageTitle}">Biodata</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<!-- Hero -->
+<header class="hero">
+    <div class="hero-inner">
+        <p class="hero-label">✨Halooo! Perkenalkan nama saya evelyn tjandinegara, bisa dipanggil eve.✨ 
+            <br>😉Umur ku 18 tahun dan sedang melanjutkan studi di Universitas Ciputra untuk studi pertamaku di perguruan tinggi.🎀</br></p>
+
+        <h1 class="hero-name" th:text="${student.fullName}">Nama</h1>
+
+        <p class="hero-tagline">
+            🎓 <span th:text="${student.major}"></span>
+        </p>
+
+        <p class="hero-intro" id="greeting"></p>
+
+        <div class="hero-buttons">
+            <a href="#portfolio" class="hero-btn">Explore ↓</a>
+        </div>
+    </div>
+</header>
+
+<!-- Short Profile -->
+<section class="about-strip">
+    <ul class="about-list">
+        <li>🎀 <span th:text="${student.nickName}"></span></li>
+        <li>🎂 <span th:text="${student.age}"></span> yrs</li>
+        <li>👧🏻 <span th:text="${student.gender}"></span></li>
+        <li>💒<span th:text="${student.religion}"></span></li>
+    </ul>
+</section>
+
+<!-- Complete Profile -->
+<main id="portfolio" class="portfolio-section">
+
+    <div class="section-header">
+        <h2>❤️About Me</h2>
+        <p>Get to know me better!</p>
+    </div>
+
+    <div class="categories-grid">
+
+        <!-- Biodata -->
+        <article class="category-card">
+            <h3>📌 Personal Info</h3>
+            <p><b>Full Name:</b> <span th:text="${student.fullName}"></span></p>
+            <p><b>Birthdate:</b> 🎂 <span th:text="${student.birthDate}"></span></p>
+            <p><b>Address:</b> 📍 <span th:text="${student.address}"></span></p>
+        </article>
+
+        <!-- Major -->
+        <article class="category-card">
+            <h3>🎯 Education</h3>
+            <p>Currently studying:</p>
+            <h4 th:text="${student.major}">Major</h4>
+        </article>
+
+        <!-- Hobbies -->
+        <article class="category-card">
+            <h3>🎨 Hobbies</h3>
+            <ul class="tag-list">
+                <li th:each="hobby : ${student.hobbies}"
+                    class="tag"
+                    th:text="${hobby}">
+                </li>
+            </ul>
+        </article>
+
+        <!-- Gallery -->
+        <article class="category-card">
+            <h3>📸 My Gallery</h3>
+
+            <div class="gallery">
+                <img th:each="img : ${student.imageFiles}"
+                     th:src="@{'/images/' + ${img}}"
+                     alt="photo">
+            </div>
+        </article>
+
+    </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>Made with 💖 by <span th:text="${student.fullName}"></span></p>
+</footer>
+
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+</html>

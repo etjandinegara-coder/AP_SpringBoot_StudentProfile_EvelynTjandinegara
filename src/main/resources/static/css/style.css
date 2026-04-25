@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    color: #444;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #5a2a55;
+}
+
+.hero-name {
+    font-size: 52px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff758c, #7a5cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-tagline {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.hero-intro {
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    padding: 12px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #7a5cff, #ff758c);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+}
+
+.primary-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ABOUT */
+.about-strip {
+    padding: 25px;
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+}
+
+.about-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.about-list li {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* SECTION */
+.portfolio-section {
+    padding: 60px 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    background: linear-gradient(90deg, #ff758c, #7a5cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-header p {
+    color: #888;
+}
+
+/* GRID */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* 🪄 CARD */
+.category-card {
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* warna beda tiap card */
+.category-card:nth-child(1) {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+
+.category-card:nth-child(2) {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+.category-card:nth-child(3) {
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+}
+
+.category-card:nth-child(4) {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+/* TEXT */
+.category-card h3 {
+    background: linear-gradient(90deg, #ff758c, #ff7eb3, #7a5cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.category-card p span {
+    font-weight: 500;
+    color: #333;
+}
+
+.category-card h4 {
+    color: #7a5cff;
+    margin-top: 10px;
+}
+
+/* HOVER */
+.category-card:hover {
+    transform: translateY(-10px) rotate(-1deg) scale(1.03);
+}
+
+/* TAG */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tag {
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 90px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.15) rotate(2deg);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
